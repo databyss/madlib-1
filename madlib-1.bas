@@ -1,3 +1,4 @@
+START:
 '6 Flash
 7 Print "Welcome to MadLib's"
 '8 Normal
@@ -38,6 +39,8 @@
 315 Input "Press 2 to retype the list"; CD$
 320 Input "Press return to continue"; AB$
 330 Cls
+
+STORY_START:
 340 Print "Welcome, "; Y$; " "; Z$; " to"
 350 Print "our game. It's more"
 360 Print "fun than riding an "; A$
@@ -49,6 +52,7 @@
 420 Print "game. Here's the story"
 430 Print "that you helped write!"
 440 Input "Press return to continue"; AB$
+
 450 Cls
 460 Print
 '469 Inverse
@@ -89,9 +93,10 @@
 790 Print U$; ", the turned on the"
 800 Print V$; " so they could "; B$
 810 Print "to music."
+
 820 Print "press 3 to restart the program"
 830 Print "press 4 to reread the story"
-840 Input "press 5 to end"; RR$
-850 If RR$ = "3" Then GoTo 7
-860 If RR$ = "4" Then GoTo 330
-870 If RR$ = "5" Then End
+840 Input "press return to end"; RR$
+
+850 If RR$ = "3" Then GoTo START
+860 If RR$ = "4" Then GoTo STORY_START
