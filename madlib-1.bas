@@ -10,6 +10,8 @@ start:
 30 GoSub enter_to_continue
 40 Cls
 
+' A pain point here is getting through all this.
+' There should be a count to let folks know their progress.
 53 Input "Title (Mr./Mrs./Dr./etc): ", Title$
 55 Input "What is your last name: ", LastName$
 60 Input "Noun: ", Noun_1$
