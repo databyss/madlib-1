@@ -1,14 +1,14 @@
 Screen 0
 Width 80
-START:
+
+start:
 '6 Flash
 7 Print "Welcome to MadLib's"
 '8 Normal
 10 Print "All you have to do is fill in the word that corresponds"
 20 Print "to the requirements. Let's start with the first list of words!"
-30 Print
-40 Input "Press return to continue"; AB$
-50 Cls
+30 GoSub enter_to_continue
+40 Cls
 
 53 Input "Mr. or Mrs."; Y$
 55 Input "What is your last name"; Z$
@@ -37,12 +37,12 @@ START:
 280 Input "yes or no"; W$
 290 Input "yes or no"; X$
 295 Input "strange saying"; SA$
+296 Print
 300 Print "finally through. Here comes"
 310 Print "the fun part!"
-315 Input "Press 2 to retype the list"; CD$
-320 Input "Press return to continue"; AB$
+320 GoSub enter_to_continue
 
-STORY_START:
+story_start:
 330 Cls
 340 Print "Welcome, "; Y$; " "; Z$; " to our game. It's more"
 350 Print "fun than riding a(n) "; A$
@@ -50,14 +50,12 @@ STORY_START:
 370 Print "enjoy this "; C$; " game. This is a nice, "
 380 Print "fun for "; D$; ", enjoyable game. Here's the story"
 390 Print "that you helped write!"
-400 Print
-410 Input "Press return to continue"; AB$
+400 GoSub enter_to_continue
 
 450 Cls
 '469 Inverse
 470 Print "        Our "; O$; " Government"
 '471 Normal
-480 Print
 485 Print
 490 Print
 500 Print "    Once upon a time in a "; F$; " far, far away,"
@@ -83,6 +81,11 @@ STORY_START:
 830 Print "press 4 to reread the story"
 840 Input "press return to end"; RR$
 
-850 If RR$ = "3" Then GoTo START
-860 If RR$ = "4" Then GoTo STORY_START
+850 If RR$ = "3" Then GoTo start
+860 If RR$ = "4" Then GoTo story_start
+End
 
+enter_to_continue:
+Print
+Input "Press return to continue"; AB$
+Return
