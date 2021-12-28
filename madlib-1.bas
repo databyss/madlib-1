@@ -10,36 +10,35 @@ start:
 30 GoSub enter_to_continue
 40 Cls
 
-53 Input "Mr. or Mrs."; Y$
-55 Input "What is your last name"; Z$
-60 Input "noun"; A$
-70 Input "verb"; B$
-80 Input "adverb (verb + ing)"; C$
-90 Input "adverb"; D$
-100 Input "adverb"; E$
-110 Input "noun"; F$
-120 Input "any number"; G$
-130 Input "an animal"; H$
-140 Input "adverb"; I$
-150 Input "a room name"; J$
-160 Input "verb"; K$
-170 Input "a piece of furniture"; L$
-180 Input "adverb"; M$
-190 Input "any president's last name"; N$
-200 Input "adjective"; O$
-210 Input "adjective"; P$
-220 Input "past tense verb"; Q$
-230 Input "plural noun"; R$
-240 Input "persons name"; S$
-250 Input "adverb"; T$
-260 Input "noun"; U$
-270 Input "a machine"; V$
-280 Input "yes or no"; W$
-290 Input "yes or no"; X$
-295 Input "strange saying"; SA$
+53 Input "Title (Mr./Mrs./Dr./etc): ", Y$
+55 Input "What is your last name: ", Z$
+60 Input "Noun: ", A$
+70 Input "Verb: ", B$
+80 Input "Adverb (verb + ing): ", C$
+90 Input "Adverb: ", D$
+100 Input "Adverb: ", E$
+110 Input "Noun: ", F$
+120 Input "Any number: ", G$
+130 Input "An animal: ", H$
+140 Input "Adverb: ", I$
+150 Input "A room name: ", J$
+160 Input "Verb: ", K$
+170 Input "A piece of furniture: ", L$
+180 Input "Adverb: ", M$
+190 Input "Any president's last name: ", N$
+200 Input "Adjective: ", O$
+210 Input "Adjective: ", P$
+220 Input "Past tense verb: ", Q$
+230 Input "Plural noun: ", R$
+240 Input "Persons name: ", S$
+250 Input "Adverb: ", T$
+260 Input "Noun: ", U$
+270 Input "A machine: ", V$
+280 Input "yes or no: ", W$
+290 Input "yes or no: ", X$
+295 Input "A strange saying: ", SA$
 296 Print
-300 Print "finally through. Here comes"
-310 Print "the fun part!"
+300 Print "Finally through all that. Here comes the fun part!"
 320 GoSub enter_to_continue
 
 story_start:
