@@ -1,6 +1,6 @@
-6 Flash
+'6 Flash
 7 Print "Welcome to MadLib's"
-8 Normal
+'8 Normal
 10 Print "All you have to do is fill"
 20 Print "in the word that corresponds"
 30 Print "to the requirements."
@@ -37,7 +37,7 @@
 310 Print "the fun part!"
 315 Input "Press 2 to retype the list"; CD$
 320 Input "Press return to continue"; AB$
-330 Home
+330 Cls
 340 Print "Welcome, "; Y$; " "; Z$; " to"
 350 Print "our game. It's more"
 360 Print "fun than riding an "; A$
@@ -51,9 +51,9 @@
 440 Input "Press return to continue"; AB$
 450 Cls
 460 Print
-469 Inverse
+'469 Inverse
 470 Print "        Our "; O$; " Government"
-471 Normal
+'471 Normal
 480 Print
 485 Print
 490 Print
