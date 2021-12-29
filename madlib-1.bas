@@ -4,6 +4,7 @@ Width 80
 start:
 ShowIntro
 
+
 ' A pain point here is getting through all this.
 ' There should be a count to let folks know their progress.
 53 Input "Title (Mr./Mrs./Dr./etc): ", Title$
@@ -48,9 +49,9 @@ story_start:
 400 WaitForEnter
 
 450 Cls
-'469 Inverse
+469 Color 31
 470 Print "        Our "; Adjective_1$; " Government"
-'471 Normal
+471 Color 15
 485 Print
 500 Print "Once upon a time in a "; Noun_2$; " far, far away,"
 520 Print "there was a "; Adjective_2$; ", little man named mister "; President$
@@ -83,6 +84,7 @@ Sub ShowIntro
     Color 30
     Print "Welcome to MadLib's"
     Color 15
+    print
     Print "All you have to do is fill in the word that corresponds"
     Print "to the requirements. Let's start with the first list of words!"
     WaitForEnter
