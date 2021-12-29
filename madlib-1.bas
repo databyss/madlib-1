@@ -2,46 +2,40 @@ Screen 0
 Width 80
 
 start:
-'6 Flash
-7 Print "Welcome to MadLib's"
-'8 Normal
-10 Print "All you have to do is fill in the word that corresponds"
-20 Print "to the requirements. Let's start with the first list of words!"
-30 GoSub enter_to_continue
-40 Cls
+ShowIntro
 
 ' A pain point here is getting through all this.
 ' There should be a count to let folks know their progress.
 53 Input "Title (Mr./Mrs./Dr./etc): ", Title$
-55 Input "What is your last name: ", LastName$
-60 Input "Noun: ", Noun_1$
-70 Input "Verb: ", Verb_1$
-80 Input "Adverb: ", Adverb_1$
-90 Input "Adverb: ", Adverb_2$
-100 Input "Adverb: ", Adverb_3$
-110 Input "Noun: ", Noun_2$
-120 Input "Any number: ", Number$
-130 Input "An animal: ", Animal$
-140 Input "Adverb: ", Adverb_4$
-150 Input "A room name: ", Room$
-160 Input "Verb: ", Verb_2$
-170 Input "A piece of furniture: ", Furniture$
-180 Input "Adverb: ", Adverb_5$
-190 Input "Any president's last name: ", President$
-200 Input "Adjective: ", Adjective_1$
-210 Input "Adjective: ", Adjective_2$
-220 Input "Past tense verb: ", PastTenseVerb$
-230 Input "Plural noun: ", PluralNoun$
-240 Input "Persons name: ", PersonsName$
-250 Input "Adverb: ", Adverb_6$
-260 Input "Noun: ", Noun_3$
-270 Input "A machine: ", Machine$
+55 Input "your last name: ", LastName$
+60 Input "noun: ", Noun_1$
+70 Input "verb: ", Verb_1$
+80 Input "adverb: ", Adverb_1$
+90 Input "adverb: ", Adverb_2$
+100 Input "adverb: ", Adverb_3$
+110 Input "noun: ", Noun_2$
+120 Input "any number: ", Number$
+130 Input "an animal: ", Animal$
+140 Input "adverb: ", Adverb_4$
+150 Input "a room name: ", Room$
+160 Input "verb: ", Verb_2$
+170 Input "a piece of furniture: ", Furniture$
+180 Input "adverb: ", Adverb_5$
+190 Input "any president's last name: ", President$
+200 Input "adjective: ", Adjective_1$
+210 Input "adjective: ", Adjective_2$
+220 Input "past tense verb: ", PastTenseVerb$
+230 Input "plural noun: ", PluralNoun$
+240 Input "persons name: ", PersonsName$
+250 Input "adverb: ", Adverb_6$
+260 Input "noun: ", Noun_3$
+270 Input "a machine: ", Machine$
 280 Input "yes or no: ", YesOrNo_1$
 290 Input "yes or no: ", YesOrNo_2$
-295 Input "A strange saying: ", StrangeSaying$
+295 Input "a strange saying: ", StrangeSaying$
 296 Print
 300 Print "Finally through all that. Here comes the fun part!"
-320 GoSub enter_to_continue
+320 WaitForEnter
 
 story_start:
 330 Cls
@@ -51,7 +45,7 @@ story_start:
 370 Print "enjoy this "; Adverb_1$; " game. This is a nice, "
 380 Print "fun for "; Adverb_2$; ", enjoyable game. Here's the story"
 390 Print "that you helped write!"
-400 GoSub enter_to_continue
+400 WaitForEnter
 
 450 Cls
 '469 Inverse
@@ -85,7 +79,17 @@ story_start:
 860 If RR$ = "4" Then GoTo story_start
 End
 
-enter_to_continue:
-Print
-Input "Press return to continue", ThrowAway$
-Return
+Sub ShowIntro
+    Color 30
+    Print "Welcome to MadLib's"
+    Color 15
+    Print "All you have to do is fill in the word that corresponds"
+    Print "to the requirements. Let's start with the first list of words!"
+    WaitForEnter
+    Cls
+End Sub
+
+Sub WaitForEnter
+    Print
+    Input "Press ENTER to continue.", throwAway
+End Sub
